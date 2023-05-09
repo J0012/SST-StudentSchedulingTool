@@ -91,7 +91,7 @@ public class CalendarViewFragment extends Fragment {
         recyclerView = view.findViewById(R.id.calendarRecyclerView);
         layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new CalendarAdapter(daysofMonth);
+       // mAdapter = new CalendarAdapter(daysofMonth);
         recyclerView.setAdapter(mAdapter);
 
         initwidgets(view);
@@ -146,7 +146,7 @@ public class CalendarViewFragment extends Fragment {
         // Get a reference to the activity and set up the toolbar
         AppCompatActivity activity = (AppCompatActivity) requireActivity();
         binding = ActivityMainBinding.inflate(activity.getLayoutInflater());
-        activity.setSupportActionBar(binding.toolbar);
+        //activity.setSupportActionBar(binding.toolbar);
         NavController navController = Navigation.findNavController(view);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(activity, navController, appBarConfiguration);

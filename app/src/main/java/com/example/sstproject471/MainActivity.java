@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         AddEventFragment addEventFragment = new AddEventFragment();
         HomeFragment homeFragment = new HomeFragment();
 
-        changeFragment(calendarViewFragment);
+        changeFragment(addEventFragment);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnItemSelectedListener(new BottomNavigationView.OnItemSelectedListener() {
@@ -51,31 +51,31 @@ public class MainActivity extends AppCompatActivity {
                 int itemId = item.getItemId();
                 if (itemId == R.id.ic_calendar) {
                     changeFragment(calendarViewFragment);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_calendar).setIcon(R.drawable.ic_calendar_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_recommend_me).setIcon(R.drawable.ic_recommend_me_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_home).setIcon(R.drawable.ic_home_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_add_event).setIcon(R.drawable.ic_add_event_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_calendar).setIcon(R.drawable.ic_calendar_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_recommend_me).setIcon(R.drawable.ic_recommend_me_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_home).setIcon(R.drawable.ic_home_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_add_event).setIcon(R.drawable.ic_add_event_drawable);
                     return true;
                 } else if (itemId == R.id.ic_recommend_me) {
                     changeFragment(recommendMeFragment);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_calendar).setIcon(R.drawable.ic_calendar_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_recommend_me).setIcon(R.drawable.ic_recommend_me_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_home).setIcon(R.drawable.ic_home_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_add_event).setIcon(R.drawable.ic_add_event_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_calendar).setIcon(R.drawable.ic_calendar_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_recommend_me).setIcon(R.drawable.ic_recommend_me_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_home).setIcon(R.drawable.ic_home_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_add_event).setIcon(R.drawable.ic_add_event_drawable);
                     return true;
                 } else if (itemId == R.id.ic_home) {
                     changeFragment(homeFragment);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_calendar).setIcon(R.drawable.ic_calendar_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_recommend_me).setIcon(R.drawable.ic_recommend_me_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_home).setIcon(R.drawable.ic_home_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_add_event).setIcon(R.drawable.ic_add_event_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_calendar).setIcon(R.drawable.ic_calendar_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_recommend_me).setIcon(R.drawable.ic_recommend_me_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_home).setIcon(R.drawable.ic_home_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_add_event).setIcon(R.drawable.ic_add_event_drawable);
                     return true;
                 } else if (itemId == R.id.ic_add_event) {
                     changeFragment(addEventFragment);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_calendar).setIcon(R.drawable.ic_calendar_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_recommend_me).setIcon(R.drawable.ic_recommend_me_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_home).setIcon(R.drawable.ic_home_drawable);
-                    bottomNavigationView.getMenu().findItem(R.id.ic_add_event).setIcon(R.drawable.ic_add_event_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_calendar).setIcon(R.drawable.ic_calendar_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_recommend_me).setIcon(R.drawable.ic_recommend_me_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_home).setIcon(R.drawable.ic_home_drawable);
+//                    bottomNavigationView.getMenu().findItem(R.id.ic_add_event).setIcon(R.drawable.ic_add_event_drawable);
                     return true;
                 }
                 return false;
