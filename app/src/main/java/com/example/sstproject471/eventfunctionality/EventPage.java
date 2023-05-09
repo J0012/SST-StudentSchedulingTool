@@ -20,12 +20,12 @@ public class EventPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_page);
 
-        TextView eventtype=(TextView) findViewById(R.id.eventtype);
-        TextView eventname=(TextView) findViewById(R.id.eventname);
-        TextView eventdate=(TextView) findViewById(R.id.eventdate);
-        TextView eventtime=(TextView) findViewById(R.id.eventtime);
-        TextView eventassociation=(TextView) findViewById(R.id.eventassociation);
-        TextView eventdescription=(TextView) findViewById(R.id.eventdescription);
+        TextView eventtype = (TextView) findViewById(R.id.eventtype);
+        TextView eventname = (TextView) findViewById(R.id.eventname);
+        TextView eventdate = (TextView) findViewById(R.id.eventdate);
+        TextView eventtime = (TextView) findViewById(R.id.eventtime);
+        TextView eventassociation = (TextView) findViewById(R.id.eventassociation);
+        TextView eventdescription = (TextView) findViewById(R.id.eventdescription);
 
         Button eventButton=(Button) findViewById(R.id.eventbutton);
         eventButton.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +58,7 @@ public class EventPage extends AppCompatActivity {
                         factory=new CustomEventFactory();
                         break;
                 }
-                event= factory.createEvent(name,date,time,association,description);
+                event = factory.createEvent(name,date,time,association,description);
 
                 String eventDetails = "Event Type: " + event.getType() +
                         "\nEvent Name: " + event.getName() +
