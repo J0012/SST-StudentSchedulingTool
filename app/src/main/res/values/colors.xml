@@ -7,7 +7,7 @@
     <color name="white">#FFFFFFFF</color> <!-- text for dark mode -->
 
 
-    <!-- high contrast on dark-gray bg -->
+    <!-- high contrast on dark-gray bg --> <!-- probably all are good for light/dark theme -->
     <color name="periwinkle">#CEC2FF</color> <!-- 11.41, HC -->
     <color name="thistle">#C8ADC0</color> <!--9.1, HC -->
     <color name="lavendar_blush">#F0E2E7</color> <!-- 14.9, HC -->

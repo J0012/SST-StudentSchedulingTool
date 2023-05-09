@@ -7,6 +7,35 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:1036933427089:android:309ab77e76b4d9fcd6b430",
+        "android_client_info": {
+          "package_name": "com.example.sstdatabase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036933427089-ajd27krg878mm2u2n3nbgu02ajqpe1rh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYT8yhT3dPRZJkHfoAo6bdZKiActCttCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036933427089-ajd27krg878mm2u2n3nbgu02ajqpe1rh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:1036933427089:android:9049c4a265bb4c54d6b430",
         "android_client_info": {
           "package_name": "com.example.sstproject471"

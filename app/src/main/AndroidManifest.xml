@@ -10,13 +10,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SSTProject471"
+        android:theme="@style/Theme.SSTSimpleSchedulingTool.PopMe"
         tools:targetApi="31">
         <activity
-            android:name=".AddEventPage"
+            android:name=".activities.AddEventPage"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.SSTProject471">
+            android:theme="@style/Theme.SSTSimpleSchedulingTool.PopMe">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
