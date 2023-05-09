@@ -6,5 +6,7 @@ public enum EventType {
     STUDY,
     CUSTOM,
     QUIZ,
-    LEISURE
+    LEISURE,
+    CLASS,
+    MEAL
 }

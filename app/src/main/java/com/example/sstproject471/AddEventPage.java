@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.sstproject471.eventfunctionality.CustomEventFactory;
 import com.example.sstproject471.eventfunctionality.Event;
 import com.example.sstproject471.eventfunctionality.EventFactory_IF;
-import com.example.sstproject471.eventfunctionality.EventPage;
+
 import com.example.sstproject471.eventfunctionality.ExamEventFactory;
 import com.example.sstproject471.eventfunctionality.HomeworkEventFactory;
 import com.example.sstproject471.eventfunctionality.LeisureEventFactory;
@@ -36,7 +36,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddEventPage extends AppCompatActivity {
-//    String type, name, date, time, association, description;
+
     EventFactory_IF factory;
     Event event;
 
