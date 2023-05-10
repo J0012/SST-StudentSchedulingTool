@@ -1,4 +1,4 @@
-package com.example.sstdatabase.adapter;
+package com.example.sstdatabase.activities;
 
 
 import android.view.LayoutInflater;
