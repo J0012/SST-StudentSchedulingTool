@@ -13,13 +13,31 @@
         android:theme="@style/Theme.SSTSimpleSchedulingTool.PopMe"
         tools:targetApi="31">
         <activity
-            android:name=".activities.AddEventActivity"
+            android:name=".activities.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+
+        <activity
+            android:name=".activities.AddEventPage"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.SSTSimpleSchedulingTool.PopMe">
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".activities.CalendarLauncher"
+            android:exported="true"
+            android:label="CalendarView">
+        </activity>
+        <activity
+            android:name=".activities.EventView" />
+        <activity
+            android:name=".activities.EventViewProxy"
+            android:theme="@style/Theme.SSTSimpleSchedulingTool.PopMe" />
+
+        <activity
+            android:name=".activities.HomePageActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
