@@ -1,6 +1,7 @@
 package com.example.sstdatabase.activities;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -19,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sstdatabase.R;
 import com.example.sstdatabase.databinding.ActivityCalendarLauncherBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.time.LocalDate;
 import java.time.YearMonth;
@@ -28,7 +30,7 @@ import java.util.ArrayList;
 
 public class CalendarLauncher extends AppCompatActivity implements CalendarAdapter.OnItemListener{
 
-        Button addEventButton;
+        FloatingActionButton fab;
         private AppBarConfiguration appBarConfiguration;
         private ActivityCalendarLauncherBinding binding;
 
@@ -50,15 +52,15 @@ public class CalendarLauncher extends AppCompatActivity implements CalendarAdapt
             NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
 
-//            addEventButton=(Button) findViewById(R.id.addEventButton); //we must make a button finder and it will find the calendar button id we make for "View Calendar" button in our main activity
-//            addEventButton.setOnClickListener(new View.OnClickListener() { //we made a button listener function
-//                @Override
-//                public void onClick(View view) {
-//                    //openActivity2(); //we call the function openActivity2 to do the action of opening activity2(which is a new page for viewing the calendar)
-//                    Intent i = new Intent(CalendarLauncher.this, AddEventPage.class);
-//                    startActivity(i);
-//                }
-//            });
+            fab = (FloatingActionButton) findViewById(R.id.floatingActionButton); //we must make a button finder and it will find the calendar button id we make for "View Calendar" button in our main activity
+            fab.setOnClickListener(new View.OnClickListener() { //we made a button listener function
+                @Override
+                public void onClick(View view) {
+                    //openActivity2(); //we call the function openActivity2 to do the action of opening activity2(which is a new page for viewing the calendar)
+                    Intent i = new Intent(CalendarLauncher.this, HomePageActivity.class);
+                    startActivity(i);
+                }
+            });
         }
 
         private void setMonthView() {
@@ -142,11 +144,20 @@ public class CalendarLauncher extends AppCompatActivity implements CalendarAdapt
                     || super.onSupportNavigateUp();
         }
 
-        @Override
-        public void onItemClick(int position, String dayText) {
-            String message = "Selected Date: " + dayText + " " + monthYearFromDate(selectedDate);
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
-        }
+    @Override
+    public void onItemClick(int position, String dayText) {
+
+        //if(dayText.equals("")){
+        String message = "Selected Date: " + dayText + " " + monthYearFromDate(selectedDate);
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+        //}
+
+
+        // WE LAUNCH THE POP UP RIGHT HERE!!! //WILL NEED TO REPLACE THIS CLASS WITH EVENTVIEWPROXY BECAUSE IN THE MAIN, WE DON'T CALL IT. WE CALL IT WITH CALENDARVIEWHOLDER!!
+        //Intent i = new Intent(getApplicationContext(), EventPopUpActivity.class);
+        Intent i = new Intent(getApplicationContext(),EventViewProxy.class);
+        startActivity(i);
+    }
 
 
 

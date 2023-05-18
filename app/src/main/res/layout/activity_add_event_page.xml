@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/pop_up_background"
     tools:context=".activities.AddEventPage">
 
         <Spinner
@@ -12,6 +13,7 @@
             android:layout_height="59dp"
             android:enabled="true"
             android:entries="@array/eventType_options"
+            android:textColorHint="@color/gray"
             app:layout_constraintBottom_toTopOf="@+id/eventName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,17 +45,18 @@
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.384" />
+            app:layout_constraintVertical_bias="0.336" />
 
-        <EditText
+        <TimePicker
             android:id="@+id/eventTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="269dp"
+            android:layout_height="135dp"
             android:ems="10"
-            android:hint="hr:min"
             android:inputType="time"
+            android:timePickerMode="spinner"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.482"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,9 +92,7 @@
             android:id="@+id/bSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/white"
             android:text="Save"
-            android:textColor="@android:color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.95"

@@ -7,7 +7,7 @@
 
     android:background="@drawable/pop_up_background"
 
-    tools:context=".EventPopUpActivity">
+    tools:context=".activities.EventViewProxy">
 
 
     <Button

@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -31,6 +32,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.sql.Time;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -73,8 +75,16 @@ public class AddEventPage extends AppCompatActivity {
                     EditText dateText = findViewById(R.id.eventDate);
                     String date = dateText.getText().toString();
 
-                    EditText timeText = findViewById(R.id.eventTime);
-                    String time = timeText.getText().toString();
+                    //Time Picker
+                    TimePicker timePicker = findViewById(R.id.eventTime);
+
+                    int hour = timePicker.getCurrentHour();
+                    int minute = timePicker.getCurrentMinute();
+
+                    String time = String.format("%02d:%02d", hour, minute);
+
+                    // Use the selectedTime string as needed
+                    System.out.println("Selected time: " + time);
 
                     EditText associationText = findViewById(R.id.eventAssociation);
                     String association = associationText.getText().toString();
@@ -140,7 +150,7 @@ public class AddEventPage extends AppCompatActivity {
                             });
 
 
-                    //Retrival Portion
+                    //Retrieval Portion
                     db.collection("events")
                             .get()
                             .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {

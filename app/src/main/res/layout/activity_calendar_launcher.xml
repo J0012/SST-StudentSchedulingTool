@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/tan"
-    android:backgroundTint="@color/tan"
     android:orientation="vertical"
+    android:background="@drawable/pop_up_background"
     android:theme="@style/Theme.SSTSimpleSchedulingTool"
     tools:context=".activities.CalendarLauncher">
 
@@ -22,17 +21,16 @@
             android:onClick="previousMonthAction"
             android:background="@android:color/transparent"
             android:text="@string/prevmonth"
-            android:textColor="@color/black"
             android:textSize="21sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/monthYearTV"
             android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:text="April 2023"
-            android:textAlignment="center"
             android:textColor="@color/black"
+            android:textAlignment="center"
             android:textSize="21sp" />
 
         <Button
@@ -42,7 +40,6 @@
             android:onClick="nextMonthAction"
             android:background="@android:color/transparent"
             android:text="@string/nextmonth"
-            android:textColor="@color/black"
             android:textSize="21sp"
             android:textStyle="bold" />
 
@@ -58,8 +55,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="SUN"
+            android:background="@color/white"
             android:textAlignment="center"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -67,8 +65,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="MON"
+            android:background="@color/white"
             android:textAlignment="center"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -76,8 +75,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="TUES"
+            android:background="@color/white"
             android:textAlignment="center"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -85,8 +85,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="WED"
+            android:background="@color/white"
             android:textAlignment="center"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -94,8 +95,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="THURS"
+            android:background="@color/white"
             android:textAlignment="center"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -103,8 +105,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="FRI"
+            android:background="@color/white"
             android:textAlignment="center"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -112,45 +115,56 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="SAT"
+            android:background="@color/white"
             android:textAlignment="center"
-            android:textColor="@color/gray"
+            android:textColor="@color/black"
             android:textSize="16sp" />
+
+
 
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/calendarRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="593dp" />
 
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_home_drawable" />
 
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".activities.CalendarLauncher">
 
+
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/Theme.SSTSimpleSchedulingTool.AppBarOverlay">
-
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="?attr/colorPrimary"
-                app:popupTheme="@style/Theme.SSTSimpleSchedulingTool.PopupOverlay" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
         <include layout="@layout/content_main" />
 
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="?attr/colorPrimary"
+            app:layout_anchor="@+id/toolbar"
+            app:layout_anchorGravity="bottom|center"
+            app:popupTheme="@style/Theme.SSTSimpleSchedulingTool.PopupOverlay" />
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 
 </LinearLayout>
