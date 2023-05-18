@@ -46,7 +46,7 @@ public class HomePageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //openActivity2(); //we call the function openActivity2 to do the action of opening activity2(which is a new page for viewing the calendar)
-                Intent i = new Intent(HomePageActivity.this, AddEventPage.class);
+                Intent i = new Intent(HomePageActivity.this, AddEventActivity.class);
                 startActivity(i);
             }
         });

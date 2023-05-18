@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.sstdatabase.R;
 import com.example.sstdatabase.databinding.ActivityCalendarLauncherBinding;
+import com.example.sstdatabase.proxy.EventViewProxy;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.time.LocalDate;
@@ -155,7 +155,7 @@ public class CalendarLauncher extends AppCompatActivity implements CalendarAdapt
 
         // WE LAUNCH THE POP UP RIGHT HERE!!! //WILL NEED TO REPLACE THIS CLASS WITH EVENTVIEWPROXY BECAUSE IN THE MAIN, WE DON'T CALL IT. WE CALL IT WITH CALENDARVIEWHOLDER!!
         //Intent i = new Intent(getApplicationContext(), EventPopUpActivity.class);
-        Intent i = new Intent(getApplicationContext(),EventViewProxy.class);
+        Intent i = new Intent(getApplicationContext(), EventViewProxy.class);
         startActivity(i);
     }
 
